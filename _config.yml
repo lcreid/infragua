@@ -1,3 +1,17 @@
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "" # the name of your site, e.g. ACME Corp.
+
+# From: https://github.com/marcanuy/jekyll-bootstrap4/blob/master/_config.yml
+sass:
+  load_paths:
+    - _sass
+    - node_modules
+exclude:
+  - node_modules
+  - LICENSE
+  - Makefile
+  - README.md
+  - package.json
+  - package-lock.json
+  - yarn.lock
