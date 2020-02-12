@@ -3,23 +3,21 @@ layout: default
 title: "INFRAGUA"
 ---
 
-<div class="container">
-  <div class="row justify-content-around">
-    <div class="col-12">
-      <div class="heroe d-flex flex-column">
-        <div class="heroe-imagen-envoltorio">
-          <img src="{{"/assets/images/Isologo-Infragua2-2918x1011.png"  | relative_url}}" alt="INFRAGUA imagen principal" class="heroe-imagen">
+<!-- Creo que el position-relative se necesita para bien ubicar la imagen de fondo. -->
+<div class="position-relative">
+  <div class="heroe d-flex flex-column">
+    <div class="heroe-imagen-envoltorio">
+      <img src="{{"/assets/images/Isologo-Infragua2-2918x1011.png"  | relative_url}}" alt="INFRAGUA imagen principal"
+        class="heroe-imagen">
+    </div>
+    <div class="d-flex justify-content-center align-items-end h-100">
+      <div class="heroe-texto-fondo">
+        <div class="heroe-texto-grande">
+          INFRAESTRUCTURAS DE GUATEMALA
         </div>
-        <div class="d-flex justify-content-center align-items-end h-100">
-          <div class="heroe-texto-fondo">
-            <div class="heroe-texto-grande">
-              INFRAESTRUCTURAS DE GUATEMALA
-            </div>
-            <hr class="heroe-texto-separador">
-            <div class="heroe-texto-pequeno">
-              SOLUCIONES EN LA CONSTRUCCIÓN
-            </div>
-          </div>
+        <hr class="heroe-texto-separador">
+        <div class="heroe-texto-pequeno">
+          SOLUCIONES EN LA CONSTRUCCIÓN
         </div>
       </div>
     </div>
