@@ -1,0 +1,21 @@
+.heroe {
+  &-imagen {
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  // From: https://love2dev.com/blog/responsive-hero-background-opacity/
+  &::before {
+    background-image: url("/assets/images/tl.jpg");
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.5;
+  }
+}
