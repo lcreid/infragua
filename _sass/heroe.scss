@@ -1,11 +1,16 @@
 $heroe-aspect-ratio: 1110px / 858px;
 
 .heroe {
-  width: map-get($grid-breakpoints, xs);
-  height: map-get($grid-breakpoints, xs) / $heroe-aspect-ratio;
+  height: auto;
+  max-width: map-get($grid-breakpoints, sm);
+  max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
+  width: auto;
 
   &-imagen {
+    height: auto;
     max-width: 100%;
+    width: auto;
+
     &-envoltorio {
       max-width: 100%;
       padding: 140px 50px 0;
@@ -44,6 +49,8 @@ $heroe-aspect-ratio: 1110px / 858px;
     margin: 0 0 0 80px;
     opacity: 0.7;
     width: 580px;
+    @extend .d-none;
+    @extend .d-sm-block;
   }
 
   // From: https://love2dev.com/blog/responsive-hero-background-opacity/
@@ -56,40 +63,42 @@ $heroe-aspect-ratio: 1110px / 858px;
     top: 0;
     left: 0;
     // No es mentira. Tienen que ser igual a los del héroe.
-    width: map-get($grid-breakpoints, xs);
-    height: map-get($grid-breakpoints, xs) / $heroe-aspect-ratio;
-  z-index: -2;
+    height: 100%;
+    max-width: map-get($grid-breakpoints, sm);
+    max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
+    width: 100%;
+    z-index: -2;
     opacity: 0.5;
   }
 }
 
 @include media-breakpoint-up(sm) {
   .heroe {
-    width: map-get($grid-breakpoints, sm);
-    height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
+    max-width: map-get($grid-breakpoints, sm);
+    max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
     &::before {
-      width: map-get($grid-breakpoints, sm);
-      height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
+      max-width: map-get($grid-breakpoints, sm);
+      max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
     }
   }
 }
 @include media-breakpoint-up(md) {
   .heroe {
-    width: map-get($grid-breakpoints, md);
-    height: map-get($grid-breakpoints, md) / $heroe-aspect-ratio;
+    max-width: map-get($grid-breakpoints, md);
+    max-height: map-get($grid-breakpoints, md) / $heroe-aspect-ratio;
     &::before {
-      width: map-get($grid-breakpoints, md);
-      height: map-get($grid-breakpoints, md) / $heroe-aspect-ratio;
+      max-width: map-get($grid-breakpoints, md);
+      max-height: map-get($grid-breakpoints, md) / $heroe-aspect-ratio;
     }
   }
 }
 @include media-breakpoint-up(lg) {
   .heroe {
-    width: map-get($grid-breakpoints, lg);
-    height: map-get($grid-breakpoints, lg) / $heroe-aspect-ratio;
+    max-width: map-get($grid-breakpoints, lg);
+    max-height: map-get($grid-breakpoints, lg) / $heroe-aspect-ratio;
     &::before {
-      width: map-get($grid-breakpoints, lg);
-      height: map-get($grid-breakpoints, lg) / $heroe-aspect-ratio;
+      max-width: map-get($grid-breakpoints, lg);
+      max-height: map-get($grid-breakpoints, lg) / $heroe-aspect-ratio;
     }
   }
 }
