@@ -1,6 +1,8 @@
+$heroe-aspect-ratio: 1110px / 858px;
+
 .heroe {
-  width: 1110px;
-  height: 858px;
+  width: map-get($grid-breakpoints, xs);
+  height: map-get($grid-breakpoints, xs) / $heroe-aspect-ratio;
 
   &-imagen {
     max-width: 100%;
@@ -54,9 +56,51 @@
     top: 0;
     left: 0;
     // No es mentira. Tienen que ser igual a los del héroe.
+    width: map-get($grid-breakpoints, xs);
+    height: map-get($grid-breakpoints, xs) / $heroe-aspect-ratio;
+  z-index: -2;
+    opacity: 0.5;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .heroe {
+    width: map-get($grid-breakpoints, sm);
+    height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
+    &::before {
+      width: map-get($grid-breakpoints, sm);
+      height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .heroe {
+    width: map-get($grid-breakpoints, md);
+    height: map-get($grid-breakpoints, md) / $heroe-aspect-ratio;
+    &::before {
+      width: map-get($grid-breakpoints, md);
+      height: map-get($grid-breakpoints, md) / $heroe-aspect-ratio;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .heroe {
+    width: map-get($grid-breakpoints, lg);
+    height: map-get($grid-breakpoints, lg) / $heroe-aspect-ratio;
+    &::before {
+      width: map-get($grid-breakpoints, lg);
+      height: map-get($grid-breakpoints, lg) / $heroe-aspect-ratio;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .heroe {
     width: 1110px;
     height: 858px;
-    z-index: -2;
-    opacity: 0.5;
+
+    &::before {
+      width: 1110px;
+      height: 858px;
+    }
   }
 }
