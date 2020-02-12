@@ -13,7 +13,7 @@ $heroe-aspect-ratio: 1110px / 858px;
 
     &-envoltorio {
       max-width: 100%;
-      padding: 140px 50px 0;
+      padding: 13% 5% 0 4%;
     }
   }
 
@@ -45,27 +45,26 @@ $heroe-aspect-ratio: 1110px / 858px;
 
   &-texto-fondo {
     background-color: $anaranjado;
-    height: 320px;
+    height: 40%;
     margin: 0 0 0 80px;
     opacity: 0.7;
     width: 580px;
-    @extend .d-none;
-    @extend .d-sm-block;
   }
 
   // From: https://love2dev.com/blog/responsive-hero-background-opacity/
   &::before {
-    background-image: url("/assets/images/tl.jpg");
+    background-image: url("/assets/images/tl-471x360.jpg");
     background-size: cover;
     content: "";
     display: block;
     position: absolute;
     top: 0;
     left: 0;
+    // TODO: Remove this comment
     // No es mentira. Tienen que ser igual a los del héroe.
     height: 100%;
-    max-width: map-get($grid-breakpoints, sm);
-    max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
+    // max-width: map-get($grid-breakpoints, sm);
+    // max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
     width: 100%;
     z-index: -2;
     opacity: 0.5;
