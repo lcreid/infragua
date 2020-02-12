@@ -12,6 +12,7 @@
 
   &-texto {
     color: white;
+    line-height: 105%;
     text-align: center;
     width: 100%;
   }
@@ -20,20 +21,28 @@
     @extend .heroe-texto;
     font-size: 36.2pt;
     font-weight: 700;
+    padding: 60px 0 6px;
   }
 
   &-texto-pequeno {
     @extend .heroe-texto;
     font-size: 24.1pt;
     font-weight: 400;
+    padding: 0 90px;
+  }
+
+  &-texto-separador {
+    border-top: 8px solid white;
+    margin: 0 100px 10px;
   }
 
   &-texto-fondo {
-    width: 500px;
-    height: 250px;
     background-color: $anaranjado;
+    height: 320px;
+    margin: 0 0 0 80px;
     opacity: 0.7;
-    }
+    width: 580px;
+  }
 
   // From: https://love2dev.com/blog/responsive-hero-background-opacity/
   &::before {
