@@ -1,8 +1,39 @@
 .heroe {
+  width: 1110px;
+  height: 858px;
+
   &-imagen {
     max-width: 100%;
-    max-height: auto;
+    &-envoltorio {
+      max-width: 100%;
+      padding: 140px 50px 0;
+    }
   }
+
+  &-texto {
+    color: white;
+    text-align: center;
+    width: 100%;
+  }
+
+  &-texto-grande {
+    @extend .heroe-texto;
+    font-size: 36.2pt;
+    font-weight: 700;
+  }
+
+  &-texto-pequeno {
+    @extend .heroe-texto;
+    font-size: 24.1pt;
+    font-weight: 400;
+  }
+
+  &-texto-fondo {
+    width: 500px;
+    height: 250px;
+    background-color: $anaranjado;
+    opacity: 0.7;
+    }
 
   // From: https://love2dev.com/blog/responsive-hero-background-opacity/
   &::before {
