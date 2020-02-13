@@ -26,16 +26,16 @@ $heroe-aspect-ratio: 1110px / 858px;
 
   &-texto-grande {
     @extend .heroe-texto;
-    font-size: 36.2pt;
+    font-size: 1rem;
     font-weight: 700;
-    padding: 60px 0 6px;
+    padding: 5% 0 2%;
   }
 
   &-texto-pequeno {
     @extend .heroe-texto;
-    font-size: 24.1pt;
+    font-size: 0.8rem;
     font-weight: 400;
-    padding: 0 90px;
+    padding: 0 18% 5%;
   }
 
   &-texto-separador {
@@ -45,10 +45,9 @@ $heroe-aspect-ratio: 1110px / 858px;
 
   &-texto-fondo {
     background-color: $anaranjado;
-    height: 40%;
-    margin: 0 0 0 80px;
+    margin: 0 0 0 8%;
     opacity: 0.7;
-    width: 580px;
+    width: 53%;
   }
 
   // From: https://love2dev.com/blog/responsive-hero-background-opacity/
@@ -67,7 +66,7 @@ $heroe-aspect-ratio: 1110px / 858px;
     // max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
     width: 100%;
     z-index: -2;
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
 
@@ -79,6 +78,14 @@ $heroe-aspect-ratio: 1110px / 858px;
       max-width: map-get($grid-breakpoints, sm);
       max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
     }
+
+    &-texto-grande {
+      font-size: 1.5rem;
+    }
+
+    &-texto-pequeno {
+      font-size: 1rem;
+    }
   }
 }
 @include media-breakpoint-up(md) {
@@ -88,6 +95,14 @@ $heroe-aspect-ratio: 1110px / 858px;
     &::before {
       max-width: map-get($grid-breakpoints, md);
       max-height: map-get($grid-breakpoints, md) / $heroe-aspect-ratio;
+    }
+
+    &-texto-grande {
+      font-size: 2rem;
+    }
+
+    &-texto-pequeno {
+      font-size: 1.5rem;
     }
   }
 }
@@ -99,6 +114,14 @@ $heroe-aspect-ratio: 1110px / 858px;
       max-width: map-get($grid-breakpoints, lg);
       max-height: map-get($grid-breakpoints, lg) / $heroe-aspect-ratio;
     }
+
+    &-texto-grande {
+      font-size: 2.5rem;
+    }
+
+    &-texto-pequeno {
+      font-size: 1.75rem;
+    }
   }
 }
 @include media-breakpoint-up(xl) {
@@ -109,6 +132,14 @@ $heroe-aspect-ratio: 1110px / 858px;
     &::before {
       width: 1110px;
       height: 858px;
+    }
+
+    &-texto-grande {
+      font-size: 3rem;
+    }
+
+    &-texto-pequeno {
+      font-size: 2rem;
     }
   }
 }
