@@ -39,8 +39,10 @@ $heroe-aspect-ratio: 1110px / 858px;
   }
 
   &-texto-separador {
-    border-top: 8px solid white;
-    margin: 0 100px 10px;
+    border-top: 0.25em solid white;
+    margin: 2% 0;
+    width: 7.5em;
+    @extend .mx-auto;
   }
 
   &-texto-fondo {
