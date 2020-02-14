@@ -61,11 +61,8 @@ $heroe-aspect-ratio: 1110px / 858px;
     position: absolute;
     top: 0;
     left: 0;
-    // TODO: Remove this comment
-    // No es mentira. Tienen que ser igual a los del héroe.
+    // Cambié alto y ancho a porcentaje
     height: 100%;
-    // max-width: map-get($grid-breakpoints, sm);
-    // max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
     width: 100%;
     z-index: -2;
     opacity: 0.8;
@@ -74,11 +71,14 @@ $heroe-aspect-ratio: 1110px / 858px;
 
 @include media-breakpoint-up(sm) {
   .heroe {
-    max-width: map-get($grid-breakpoints, sm);
+    height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
     max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
+    max-width: map-get($grid-breakpoints, sm);
+    width: map-get($grid-breakpoints, sm);
+
     &::before {
-      max-width: map-get($grid-breakpoints, sm);
       max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
+      max-width: map-get($grid-breakpoints, sm);
     }
 
     &-texto-grande {
@@ -92,11 +92,14 @@ $heroe-aspect-ratio: 1110px / 858px;
 }
 @include media-breakpoint-up(md) {
   .heroe {
-    max-width: map-get($grid-breakpoints, md);
+    height: map-get($grid-breakpoints, md) / $heroe-aspect-ratio;
     max-height: map-get($grid-breakpoints, md) / $heroe-aspect-ratio;
+    max-width: map-get($grid-breakpoints, md);
+    width: map-get($grid-breakpoints, md);
+
     &::before {
-      max-width: map-get($grid-breakpoints, md);
       max-height: map-get($grid-breakpoints, md) / $heroe-aspect-ratio;
+      max-width: map-get($grid-breakpoints, md);
     }
 
     &-texto-grande {
@@ -110,11 +113,14 @@ $heroe-aspect-ratio: 1110px / 858px;
 }
 @include media-breakpoint-up(lg) {
   .heroe {
-    max-width: map-get($grid-breakpoints, lg);
+    height: map-get($grid-breakpoints, lg) / $heroe-aspect-ratio;
     max-height: map-get($grid-breakpoints, lg) / $heroe-aspect-ratio;
+    max-width: map-get($grid-breakpoints, lg);
+    width: map-get($grid-breakpoints, lg);
+
     &::before {
-      max-width: map-get($grid-breakpoints, lg);
       max-height: map-get($grid-breakpoints, lg) / $heroe-aspect-ratio;
+      max-width: map-get($grid-breakpoints, lg);
     }
 
     &-texto-grande {
@@ -128,12 +134,12 @@ $heroe-aspect-ratio: 1110px / 858px;
 }
 @include media-breakpoint-up(xl) {
   .heroe {
-    width: 1110px;
     height: 858px;
+    width: 1110px;
 
     &::before {
-      width: 1110px;
       height: 858px;
+      width: 1110px;
     }
 
     &-texto-grande {
