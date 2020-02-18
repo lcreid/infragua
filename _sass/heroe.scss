@@ -132,6 +132,9 @@ $heroe-aspect-ratio: 1110px / 858px;
     }
   }
 }
+
+// Porque la imagen llega a sus dimensiones máximas antes de los 1,200 pixeles,
+// para nada sirve este breakpoint.
 @include media-breakpoint-up(xl) {
   .heroe {
     height: 858px;
