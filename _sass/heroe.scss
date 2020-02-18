@@ -26,14 +26,14 @@ $heroe-aspect-ratio: 1110px / 858px;
 
   &-texto-grande {
     @extend .heroe-texto;
-    font-size: 1rem;
+    font-size: 3rem;
     font-weight: 700;
     padding: 5% 0 2%;
   }
 
   &-texto-pequeno {
     @extend .heroe-texto;
-    font-size: 0.8rem;
+    font-size: 2rem;
     font-weight: 400;
     padding: 0 18% 5%;
   }
@@ -80,14 +80,6 @@ $heroe-aspect-ratio: 1110px / 858px;
       max-height: map-get($grid-breakpoints, sm) / $heroe-aspect-ratio;
       max-width: map-get($grid-breakpoints, sm);
     }
-
-    &-texto-grande {
-      font-size: 1.5rem;
-    }
-
-    &-texto-pequeno {
-      font-size: 1rem;
-    }
   }
 }
 @include media-breakpoint-up(md) {
@@ -101,14 +93,6 @@ $heroe-aspect-ratio: 1110px / 858px;
       max-height: map-get($grid-breakpoints, md) / $heroe-aspect-ratio;
       max-width: map-get($grid-breakpoints, md);
     }
-
-    &-texto-grande {
-      font-size: 2rem;
-    }
-
-    &-texto-pequeno {
-      font-size: 1.5rem;
-    }
   }
 }
 @include media-breakpoint-up(lg) {
@@ -121,14 +105,6 @@ $heroe-aspect-ratio: 1110px / 858px;
     &::before {
       max-height: map-get($grid-breakpoints, lg) / $heroe-aspect-ratio;
       max-width: map-get($grid-breakpoints, lg);
-    }
-
-    &-texto-grande {
-      font-size: 3rem;
-    }
-
-    &-texto-pequeno {
-      font-size: 2rem;
     }
   }
 }
