@@ -124,25 +124,6 @@ $heroe-aspect-ratio: 1110px / 858px;
     }
 
     &-texto-grande {
-      font-size: 2.5rem;
-    }
-
-    &-texto-pequeno {
-      font-size: 1.75rem;
-    }
-  }
-}
-@include media-breakpoint-up(xl) {
-  .heroe {
-    height: 858px;
-    width: 1110px;
-
-    &::before {
-      height: 858px;
-      width: 1110px;
-    }
-
-    &-texto-grande {
       font-size: 3rem;
     }
 
