@@ -21,15 +21,17 @@
 
   &-caja {
     background-color: $anaranjado-80;
+    margin-top: 16%;
     @extend .mx-auto;
     width: 15.125rem;
   }
 
   &-cuerpo {
-    color: white;
-    font-weight: 800;
+    font-size: 18 / 72 * 96rem /32;
+    font-weight: 400;
     line-height: 1.25;
-    padding-top: 19 / 285 * 100%;
+    margin-top: 2rem;
+    padding: 0 2.75rem;
     @extend .text-center;
   }
 
@@ -40,11 +42,6 @@
     font-weight: 800;
     // letter-spacing: 0.05em;
     @extend .text-center;
-  }
-
-  a {
-    color: inherit; /* blue colors for links too */
-    text-decoration: underline;
   }
 }
 
