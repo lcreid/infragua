@@ -1,6 +1,12 @@
+// Lo siguiente son las medidas del diapositivo o sea,
+// en grande ("lg").
 $alto: 768px;
 $ancho: 1024px;
 $aspect-ratio-pagina: 1024px / 768px;
+
+@function px-to-rem($pixels) {
+  @return $pixels / 32px * 1rem;
+}
 
 html {
   font-size: 12px;
