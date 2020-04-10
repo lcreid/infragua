@@ -1,0 +1,28 @@
+.nuestro-trabajo {
+  h1 {
+    background-color: $anaranjado;
+    color: white;
+    font-size: 2.35rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .tarjeta {
+    @extend .align-self-center;
+    @extend .col-4;
+
+    .texto {
+      font-family: $font-family-graficas;
+      font-size: 18 / 72 * 96rem / 32;
+      text-align: center;
+    }
+
+    img {
+      @extend .mx-auto;
+      height: auto;
+      max-width: 210px;
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+}

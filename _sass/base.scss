@@ -1,3 +1,7 @@
+$alto: 768px;
+$ancho: 1024px;
+$aspect-ratio-pagina: 1024px / 768px;
+
 html {
   font-size: 12px;
 }
@@ -6,15 +10,28 @@ html {
   html {
     font-size: 16px;
   }
+
+  .pagina {
+    width: map-get($grid-breakpoints, sm);
+  }
 }
 
 @include media-breakpoint-up(md) {
   html {
     font-size: 24px;
   }
+
+  .pagina {
+    width: map-get($grid-breakpoints, md);
+  }
 }
 @include media-breakpoint-up(lg) {
   html {
     font-size: 32px;
+  }
+
+  .pagina {
+    height: $alto;
+    width: $ancho;
   }
 }
