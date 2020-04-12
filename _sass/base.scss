@@ -40,6 +40,8 @@ html {
   }
 
   .pagina {
+    // Usando min-height para dejar crecer Nuestro Trabajo
+    min-height: map-get($grid-breakpoints, sm) / $aspect-ratio-pagina;
     width: map-get($grid-breakpoints, sm);
   }
 }
@@ -50,6 +52,7 @@ html {
   }
 
   .pagina {
+    min-height: map-get($grid-breakpoints, md) / $aspect-ratio-pagina;
     width: map-get($grid-breakpoints, md);
   }
 }
