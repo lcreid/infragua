@@ -1,0 +1,26 @@
+.mision {
+  height: 100%;
+  position: relative;
+
+  .columna {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: px-to-rem(353px);
+
+    .columna-imagen {
+      @include imagen-fondo-escalable("/assets/images/objeto-slide3-353x768.png");
+    }
+  }
+
+
+  .cuerpo {
+    position: absolute;
+  }
+
+  .imagen-izquierda {
+    height: px-to-rem(758px);
+    width: px-to-rem(353px);
+  }
+}
