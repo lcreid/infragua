@@ -8,12 +8,30 @@ $aspect-ratio-pagina: 1024px / 768px;
   @return $pixels / 32px * 1rem;
 }
 
+@mixin imagen-fondo-escalable($imagen) {
+  // From: https://love2dev.com/blog/responsive-hero-background-opacity/
+  &::before {
+    background-image: url($imagen);
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // Cambié alto y ancho a porcentaje
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.8;
+  }
+}
+
 html {
   font-size: 12px;
 }
 
 .pagina {
-  @extend .mb-sm-2
+  @extend .mb-sm-2;
 }
 
 @include media-breakpoint-up(sm) {
