@@ -1,3 +1,6 @@
+$ancho-col-izquierda: 353px;
+$ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
+
 .mision {
   height: 100%;
   position: relative;
@@ -16,10 +19,46 @@
 
   .cuerpo {
     position: absolute;
+    text-align: center;
   }
 
   .imagen-izquierda {
     height: px-to-rem(758px);
-    width: px-to-rem(353px);
+    width: px-to-rem($ancho-col-izquierda);
+  }
+
+  .col-derecha {
+    @extend .col-sm;
+    font-size: pt-to-rem(21.1pt);
+    line-height: 1.4;
+  }
+
+  .col-izquierda {
+    @extend .col-sm-4;
+    color: white;
+    font-family: $headings-font-family;
+    font-size: pt-to-rem(42.3pt);
+    font-weight: 800;
+    width: $ancho-col-izquierda-porcentaje;
   }
 }
+
+// @include media-breakpoint-up(sm) {
+//   .col-izquierda {
+//     @extend .col-sm;
+//     width: px-to-rem($ancho-col-izquierda);
+//   }
+// }
+
+// @include media-breakpoint-up(md) {
+//   .col-izquierda {
+//     @extend .col-md;
+//     width: px-to-rem($ancho-col-izquierda);
+//   }
+// }
+// @include media-breakpoint-up(lg) {
+//   .col-izquierda {
+//     @extend .col-lg;
+//     width: px-to-rem($ancho-col-izquierda);
+//   }
+// }

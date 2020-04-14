@@ -4,6 +4,16 @@ $alto: 768px;
 $ancho: 1024px;
 $aspect-ratio-pagina: 1024px / 768px;
 
+// Debido al diseño para pantalla grande, estas funciones convierten las medidas
+// del diseño original a unos relativas al tamaño de la letra del tamaño de
+// la pantalla.
+@function pt-to-rem($points) {
+  @return px-to-rem($points * 96px / 72pt);
+}
+
+// Debido al diseño para pantalla grande, esta función convierte las medidas
+// del diseño original a unos relativas al tamaño de la letra del tamaño de
+// la pantalla.
 @function px-to-rem($pixels) {
   @return $pixels / 32px * 1rem;
 }
