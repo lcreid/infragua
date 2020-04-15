@@ -5,6 +5,41 @@ $ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
   height: 100%;
   position: relative;
 
+  .cuerpo {
+  }
+
+  .imagen-izquierda {
+    height: px-to-rem(758px);
+    width: px-to-rem($ancho-col-izquierda);
+  }
+
+  .col-derecha {
+    @extend .col-sm;
+    font-size: pt-to-rem(21.1pt);
+    line-height: 1.4;
+  }
+
+  // Estoy medio segura que esta clase tiene que llamarse con "col-" al principio
+  // para activar algo en el grid de Bootstrap.
+  .col-izquierda {
+    @include encabezado;
+
+    &-texto {
+      @include encabezado-texto;
+      font-family: $headings-font-family;
+      font-size: pt-to-rem(42.3pt);
+      font-weight: 800;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .col-izquierda {
+    @extend .col-sm-4;
+    &-texto {
+    }
+  }
+
   .columna {
     height: 100%;
     left: 0;
@@ -21,44 +56,4 @@ $ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
     position: absolute;
     text-align: center;
   }
-
-  .imagen-izquierda {
-    height: px-to-rem(758px);
-    width: px-to-rem($ancho-col-izquierda);
-  }
-
-  .col-derecha {
-    @extend .col-sm;
-    font-size: pt-to-rem(21.1pt);
-    line-height: 1.4;
-  }
-
-  .col-izquierda {
-    @extend .col-sm-4;
-    color: white;
-    font-family: $headings-font-family;
-    font-size: pt-to-rem(42.3pt);
-    font-weight: 800;
-    width: $ancho-col-izquierda-porcentaje;
-  }
 }
-
-// @include media-breakpoint-up(sm) {
-//   .col-izquierda {
-//     @extend .col-sm;
-//     width: px-to-rem($ancho-col-izquierda);
-//   }
-// }
-
-// @include media-breakpoint-up(md) {
-//   .col-izquierda {
-//     @extend .col-md;
-//     width: px-to-rem($ancho-col-izquierda);
-//   }
-// }
-// @include media-breakpoint-up(lg) {
-//   .col-izquierda {
-//     @extend .col-lg;
-//     width: px-to-rem($ancho-col-izquierda);
-//   }
-// }
