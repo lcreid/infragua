@@ -23,7 +23,6 @@ $ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
   // para activar algo en el grid de Bootstrap.
   .col-izquierda {
     &-texto {
-      color: white;
       font-family: $headings-font-family;
       font-size: pt-to-rem(42.3pt);
       font-weight: 800;
@@ -43,6 +42,7 @@ $ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
   .col-izquierda {
     @extend .col-sm-4;
     &-texto {
+      color: white;
     }
   }
 
