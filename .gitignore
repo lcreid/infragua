@@ -3,6 +3,10 @@
 .jekyll-metadata
 
 _site
+_tmp
 CARPETA OBJETOS DE PRESENTACIÓN/
 
-.vagrant
+Guardfile
+crash.log
+vendor
+node_modules/
