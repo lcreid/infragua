@@ -47,16 +47,16 @@
 
 @include media-breakpoint-up(sm) {
   .infragua {
-    width: map-get($grid-breakpoints, sm);
+    width: map-get($container-max-widths, sm);
   }
 }
 @include media-breakpoint-up(md) {
   .infragua {
-    width: map-get($grid-breakpoints, md);
+    width: map-get($container-max-widths, md);
   }
 }
 @include media-breakpoint-up(lg) {
   .infragua {
-    width: map-get($grid-breakpoints, lg);
+    width: map-get($container-max-widths, lg);
   }
 }
