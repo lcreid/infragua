@@ -1,12 +1,12 @@
 $ancho-col-izquierda: 353px;
+$ancho-mision: map-get($container-max-widths, lg);
+$alto-mision: 768px;
+$mision-aspect-ratio: $ancho-mision / $alto-mision;
 $ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
 
 .mision {
   height: 100%;
   position: relative;
-
-  .cuerpo {
-  }
 
   .imagen-izquierda {
     height: px-to-rem(758px);
@@ -23,6 +23,7 @@ $ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
   // para activar algo en el grid de Bootstrap.
   .col-izquierda {
     @extend .col-sm-4;
+
     &-texto {
       font-family: $headings-font-family;
       font-size: pt-to-rem(42.3pt);
@@ -61,5 +62,65 @@ $ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
   .cuerpo {
     position: absolute;
     text-align: center;
+  }
+}
+
+.nueva {
+  .columna {
+    height: 100%;
+    width: $ancho-col-izquierda-porcentaje;
+  }
+
+  .columna-imagen {
+    @include imagen-fondo-escalable("/assets/images/objeto-slide3-353x768.png");
+  }
+
+  .col-derecha {
+    font-size: pt-to-rem(21.1pt);
+    line-height: 1.4;
+  }
+
+  .col-izquierda {
+    width: $ancho-col-izquierda-porcentaje;
+    font-family: $headings-font-family;
+    font-size: pt-to-rem(42.3pt);
+    font-weight: 800;
+  }
+
+  .cuerpo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .mision {
+      height: map-get($container-max-widths, sm) / $mision-aspect-ratio;
+      max-height: map-get($container-max-widths, sm) / $mision-aspect-ratio;
+      max-width: map-get($container-max-widths, sm);
+      width: map-get($container-max-widths, sm);
+    }
+
+    .col-izquierda {
+      color: white;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .mision {
+      height: map-get($container-max-widths, md) / $mision-aspect-ratio;
+      max-height: map-get($container-max-widths, md) / $mision-aspect-ratio;
+      max-width: map-get($container-max-widths, md);
+      width: map-get($container-max-widths, md);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .mision {
+      height: map-get($container-max-widths, lg) / $mision-aspect-ratio;
+      max-height: map-get($container-max-widths, lg) / $mision-aspect-ratio;
+      max-width: map-get($container-max-widths, lg);
+      width: map-get($container-max-widths, lg);
+    }
   }
 }
