@@ -1,71 +1,13 @@
 $ancho-col-izquierda: 353px;
-$ancho-mision: map-get($container-max-widths, lg);
+$ancho-mision: 912px;
 $alto-mision: 768px;
 $mision-aspect-ratio: $ancho-mision / $alto-mision;
-$ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
+$ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho-mision * 100%;
 
 .mision {
   height: 100%;
   position: relative;
 
-  .imagen-izquierda {
-    height: px-to-rem(758px);
-    width: px-to-rem($ancho-col-izquierda);
-  }
-
-  .col-derecha {
-    @extend .col-sm;
-    font-size: pt-to-rem(21.1pt);
-    line-height: 1.4;
-  }
-
-  // Estoy medio seguro que esta clase tiene que llamarse con "col-" al principio
-  // para activar algo en el grid de Bootstrap.
-  .col-izquierda {
-    @extend .col-sm-4;
-
-    &-texto {
-      font-family: $headings-font-family;
-      font-size: pt-to-rem(42.3pt);
-      font-weight: 800;
-    }
-  }
-}
-
-@include media-breakpoint-down(xs) {
-  .col-izquierda {
-    &-texto {
-      text-align: center;
-    }
-  }
-}
-
-@include media-breakpoint-up(sm) {
-  .col-izquierda {
-    &-texto {
-      color: white;
-    }
-  }
-
-  .columna {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: px-to-rem(353px);
-
-    .columna-imagen {
-      @include imagen-fondo-escalable("/assets/images/objeto-slide3-353x768.png");
-    }
-  }
-
-  .cuerpo {
-    position: absolute;
-    text-align: center;
-  }
-}
-
-.nueva {
   @include media-breakpoint-down(xs) {
     .col-izquierda {
       width: 100%;
@@ -81,12 +23,17 @@ $ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
 
   .col-derecha {
     text-align: center;
+    font-size: pt-to-rem(21.1pt);
+    line-height: 1.4;
   }
 
   @include media-breakpoint-up(sm) {
     .columna {
       height: 100%;
       width: $ancho-col-izquierda-porcentaje;
+      left: 0;
+      top: 0;
+      position: absolute;
     }
 
     .columna-imagen {
@@ -96,10 +43,12 @@ $ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
     .col-derecha {
       font-size: pt-to-rem(21.1pt);
       line-height: 1.4;
+      width: 100% - $ancho-col-izquierda-porcentaje;
     }
 
     .col-izquierda {
       width: $ancho-col-izquierda-porcentaje;
+      color: white;
     }
 
     .cuerpo {
@@ -107,36 +56,26 @@ $ancho-col-izquierda-porcentaje: $ancho-col-izquierda / $ancho * 100%;
       top: 0;
       left: 0;
     }
-
-    @include media-breakpoint-up(sm) {
-      .mision {
-        height: map-get($container-max-widths, sm) / $mision-aspect-ratio;
-        max-height: map-get($container-max-widths, sm) / $mision-aspect-ratio;
-        max-width: map-get($container-max-widths, sm);
-        width: map-get($container-max-widths, sm);
-      }
-
-      .col-izquierda {
-        color: white;
-      }
-    }
   }
+}
 
-  @include media-breakpoint-up(md) {
-    .mision {
-      height: map-get($container-max-widths, md) / $mision-aspect-ratio;
-      max-height: map-get($container-max-widths, md) / $mision-aspect-ratio;
-      max-width: map-get($container-max-widths, md);
-      width: map-get($container-max-widths, md);
-    }
+@include media-breakpoint-up(sm) {
+  .mision {
+    height: map-get($container-max-widths, sm) / $mision-aspect-ratio;
+    width: map-get($container-max-widths, sm);
   }
+}
 
-  @include media-breakpoint-up(lg) {
-    .mision {
-      height: map-get($container-max-widths, lg) / $mision-aspect-ratio;
-      max-height: map-get($container-max-widths, lg) / $mision-aspect-ratio;
-      max-width: map-get($container-max-widths, lg);
-      width: map-get($container-max-widths, lg);
-    }
+@include media-breakpoint-up(md) {
+  .mision {
+    height: map-get($container-max-widths, md) / $mision-aspect-ratio;
+    width: map-get($container-max-widths, md);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .mision {
+    height: map-get($container-max-widths, lg) / $mision-aspect-ratio;
+    width: map-get($container-max-widths, lg);
   }
 }
