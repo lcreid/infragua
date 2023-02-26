@@ -14,7 +14,7 @@ Some fun things:
 ## Deploy
 
 ```bash
-rsync TBD
+rsync -r _site/ infragua@infragua.com:/var/www/infragua.com/html
 ```
 
 ## Actualización Bootstrap 5
