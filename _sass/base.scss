@@ -1,8 +1,8 @@
 // Lo siguiente son las medidas del diapositivo o sea,
 // en grande ("lg").
-$alto: 768px;
-$ancho: 1024px;
-$aspect-ratio-pagina: 1024px / 768px;
+$alto: 720px;
+$ancho: 960px;
+$aspect-ratio-pagina: $ancho / $alto;
 
 // Debido al diseño para pantalla grande, estas funciones convierten las medidas
 // del diseño original a unos relativas al tamaño de la letra del tamaño de
@@ -66,6 +66,8 @@ html {
   @extend .mb-sm-2;
   @extend .d-flex;
   @extend .justify-content-center;
+  position: relative;
+  width: $ancho;
 }
 
 @include media-breakpoint-up(sm) {
@@ -74,11 +76,6 @@ html {
   }
 
   .pagina {
-    // Usando min-height para dejar crecer Nuestro Trabajo
-    min-height: map-get($container-max-widths, sm) / $aspect-ratio-pagina;
-    height: map-get($container-max-widths, sm) / $aspect-ratio-pagina;
-    max-height: map-get($container-max-widths, sm) / $aspect-ratio-pagina;
-    max-width: map-get($container-max-widths, sm);
     width: map-get($container-max-widths, sm);
   }
 }
@@ -89,11 +86,7 @@ html {
   }
 
   .pagina {
-    min-height: map-get($container-max-widths, md) / $aspect-ratio-pagina;
-    height: map-get($container-max-widths, sm) / $aspect-ratio-pagina;
-    max-height: map-get($container-max-widths, sm) / $aspect-ratio-pagina;
-    max-width: map-get($container-max-widths, sm);
-    width: map-get($container-max-widths, sm);
+    width: map-get($container-max-widths, md);
   }
 }
 @include media-breakpoint-up(lg) {
