@@ -16,3 +16,13 @@ exclude:
   - package-lock.json
   - yarn.lock
   - "CARPETA OBJETOS DE PRESENTACIÓN"
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+include:
+  - node_modules/@popperjs/core/dist/umd/popper.min.js
+  - node_modules/@popperjs/core/dist/umd/popper.min.js.map
+  - node_modules/bootstrap/dist/js/bootstrap.min.js
+  - node_modules/bootstrap/dist/js/bootstrap.min.js.map
