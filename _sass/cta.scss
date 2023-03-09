@@ -1,0 +1,9 @@
+.cta {
+  a {
+    color: $anaranjado;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+}
