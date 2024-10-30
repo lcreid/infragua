@@ -10,3 +10,5 @@ Guardfile
 crash.log
 vendor
 node_modules/
+
+.env
