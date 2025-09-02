@@ -99,3 +99,34 @@ html {
     width: $ancho;
   }
 }
+
+$panel-ancho: 912px;
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 16px;
+  }
+
+  .panel {
+    width: map-get($container-max-widths, sm) * $panel-ancho / map-get($container-max-widths, lg);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 24px;
+  }
+
+  .panel {
+    width: map-get($container-max-widths, md) * $panel-ancho / map-get($container-max-widths, lg);
+  }
+}
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 32px;
+  }
+
+  .panel {
+    width: $panel-ancho;
+  }
+}
