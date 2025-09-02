@@ -20,6 +20,8 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - Dockerfile
+  - config/
 
 include:
   - node_modules/@popperjs/core/dist/umd/popper.min.js
